@@ -1,0 +1,355 @@
+<!doctype html>
+<!-- Conditional comment for mobile ie7 http://blogs.msdn.com/b/iemobile/ -->
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile viewport optimization http://goo.gl/b9SaQ -->
+<!--
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-->
+
+  <!-- Home screen icon  Mathias Bynens http://goo.gl/6nVq0 -->
+  <!-- For iPhone 4 with high-resolution Retina display: -->
+<!--  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png">-->
+  <!-- For first-generation iPad: -->
+<!--  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png">-->
+  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<!--  <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png">-->
+<!--   For nokia devices: -->
+<!--  <link rel="shortcut icon" href="img/l/apple-touch-icon.png">-->
+  
+
+  <!--iOS web app, deletable if not needed -->
+  <!--the script prevents links from opening in mobile safari. https://gist.github.com/1042026
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+  <link rel="apple-touch-startup-image" href="img/l/splash.png">-->
+
+  <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+  <meta http-equiv="cleartype" content="on">
+
+  <!-- more tags for your 'head' to consider https://gist.github.com/849231 -->
+
+  <!-- Main Stylesheet -->
+<!--  <link rel="stylesheet" href="css/style.css?v=1">-->
+
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+<!--  <script src="js/libs/modernizr-custom.js"></script>-->
+  <!-- Media Queries Polyfill https://github.com/shichuan/mobile-html5-boilerplate/wiki/Media-Queries-Polyfill -->
+<!--  <script>Modernizr.mq('(min-width:0)') || document.write('<script src="js/libs/respond.min.js">\x3C/script>')</script>-->
+
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
+</head>
+
+<body>
+  <div data-role="page" id="page1"  data-theme="a" data-content-theme="b">
+    <div data-role="header">
+        <a href="#page1" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext">Menu</a>
+        <H1>Vessels</H1>
+        <a href="#page1" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Menu</a>
+    </div>
+    <div data-role="main" class="ui-content">
+        <H1> 
+            Fleet Terminals
+        </H1>
+      <ul data-role="listview" data-inset="true">
+          <li><a href="#page2" data-transition="slide"><img src="../img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">10.61.41.116 Club Med 2 </a></li>
+          <li><a href="#page2" data-transition="slide"><img src="../img/icons/terminals/offline/big.png" alt="online" class="ui-li-icon ui-corner-none">110.61.41.777 Nordic Apollo</a></li>
+          <li><a href="#page2" data-transition="slide"><img src="../img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">110.61.46.214 Nordic Vega</a></li>
+          <li><a href="#page2" data-transition="slide"><img src="../img/icons/terminals/mixed/big.png" alt="online" class="ui-li-icon ui-corner-none">110.61.40.134 Athenian Phoenix</a></li>
+          <li><a href="#page2" data-transition="slide"><img src="../img/icons/terminals/aged/big.png" alt="online" class="ui-li-icon ui-corner-none">110.61.450.134 Semi Drone</a></li>
+      </ul>
+        
+    </div>
+    <div data-role="footer">
+      <H1>
+        ©KVH  
+      </H1>  
+    </div>   
+  </div> <!--! end of #container -->
+
+  <div  data-role="page" id="page2" data-theme="a">
+    <div data-role="header">
+        <a href="#page1" data-icon="back" data-transition="slide">Back</a>
+        <H1>Vessel Details. Dravo Costa Dorada </H1>
+      <a href="#page1" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Menu</a>
+    </div>
+    <div data-role="main" class="ui-content">
+        <H1> 
+            Dravo Costa Dorada 
+        </H1>
+      <p>
+      <table data-role="table">
+        <thead>
+          <th>IMO Number:</th>
+          <th>MMSI:</th>
+          <th>Radio Call Sign:</th>
+          <th>Lat / Lon:</th>
+          <th>Speed / COG: </th>
+          <th>Country:</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>8611180	</td>
+            <td>225399000</td>
+            <td>ECCD</td>
+            <td>40.14° / -8.84°</td>
+            <td>0 kn / 90 °</td>
+            <td>Spain</td>
+            
+<!--
+              IMO Number:8611180      
+              MMSI: 225399000
+              Radio Call Sign: ECCD
+              Lat / Lon: 40.14° / -8.84°	
+              Speed / COG: 0 kn / 90 °
+              Country: Spain
+-->
+          </tr>
+        </tbody>
+      </table>
+      </p>
+
+<div data-role="collapsibleset" data-theme="a" data-content-theme="b">
+<!--
+    <div data-role="collapsible">
+        <h2>Filtered list</h2>
+            <ul data-role="listview" data-filter="true" data-filter-theme="a" data-divider-theme="b">
+                <li><a href="index.html">Adam Kinkaid</a></li>
+                <li><a href="index.html">Alex Wickerham</a></li>
+                <li><a href="index.html">Avery Johnson</a></li>
+                <li><a href="index.html">Bob Cabot</a></li>
+                <li><a href="index.html">Caleb Booth</a></li>
+            </ul>
+    </div>
+-->
+    <div data-role="collapsible" data-inset="true">
+          <h2><img src="../img/icons/systems/system.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;System  1. V7 10.61.40.214. Commbox</h2>
+              <ul data-role="listview" data-theme="a" data-divider-theme="d">
+                  <!-- TERMINAL LAYOUT -->
+                  <li data-role="list-divider"><img src="../img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;&nbsp;10.61.24.42&nbsp;&nbsp; Terminal: V7 <img src="../img/icons/up1.png" alt="online" class="ui-li-icon ui-corner-none"><img src="../img/icons/signal/online-2.png" alt="online" class="ui-li-icon ui-corner-none"><img src="../img/icons/down1.png" alt="online" class="ui-li-icon ui-corner-none"><img src="../img/icons/signal/online-3.png" alt="online" class="ui-li-icon ui-corner-none">  <span class="ui-li-count">~ 12 hrs ago</span></li>
+                  <li><a href="#page3" data-transition="slide">
+                      <h3>Billing Info</h3>
+<!--                  <p><strong>Billing Account  </strong></p>-->
+                  <p>Customer Number:&nbsp;<strong>7639</strong></p>
+                  <p>Cusotomer Name:&nbsp;<strong>"VOS APHRODITE"</strong></p>
+                  <p>Plan type:&nbsp;<strong>VSAT Fixed</strong></p>
+                      <p class="ui-li-aside">Update:<strong> 2015-02-25T10:35:36Z</strong></p>
+                  </a></li>
+                  <li><a href="index.html">
+                      <h3>MTD Alerts</h3>
+                  <p><strong>Boston Conference Planning</strong></p>
+                  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+                      <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+                  </a></li>
+                  <li><a href="index.html">
+                      <h3>MTD Usage</h3>
+                  <p><strong>Boston Conference Planning</strong></p>
+                  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+                      <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+                  </a></li>
+                  <li><a href="index.html">
+                      <h3>Terminal Utilisation</h3>
+                  <p><strong>Boston Conference Planning</strong></p>
+                  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+                      <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+                  </a>
+                  </li>
+                    <li><a href="index.html">
+                      <h3>Utilization Status</h3>
+                  <p><strong>Boston Conference Planning</strong></p>
+                  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+                      <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+                  </a></li>
+                  <li><a href="index.html">
+                      <h3>Protocol Report</h3>
+                  <p><strong>Boston Conference Planning</strong></p>
+                  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+                      <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+                  </a></li>
+                <!-- COMMBOX LAYOUT -->
+                  <li data-role="list-divider"><img src="../img/icons/cbx/cbx-online.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;&nbsp;CommBox 1  <span class="ui-li-count">2</span></li>
+                  <li><a href="#page4">
+                      <h3>Current Configuration</h3>
+                  <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+                  <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+                      <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                  </a></li>
+                <!-- Media LAYOUT -->
+                  <li data-role="list-divider"><img src="../img/icons/medias/media-online.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;&nbsp;MediaServer 1  <span class="ui-li-count">2</span></li>
+<!--
+                  <li><a href="index.html">
+                      <h3>Billing Info</h3>
+                  <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+                  <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+                      <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                  </a></li>
+-->
+              </ul>
+          </div>
+          <div data-role="collapsible" data-inset="true">
+<h2><img src="../img/icons/systems/system.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;System 2. V11 10.61.41.45</h2>
+              <ul data-role="listview" data-split-icon="gear"  data-theme="a" data-divider-theme="d">
+               <li data-role="list-divider"><img src="../img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;&nbsp;10.61.24.42&nbsp;&nbsp; Terminal: V7 <img src="../img/icons/up1.png" alt="online" class="ui-li-icon ui-corner-none"><img src="../img/icons/signal/online-2.png" alt="online" class="ui-li-icon ui-corner-none"><img src="../img/icons/down1.png" alt="online" class="ui-li-icon ui-corner-none"><img src="../img/icons/signal/online-3.png" alt="online" class="ui-li-icon ui-corner-none">  <span class="ui-li-count">~ 12 hrs ago</span></li>
+                  <li><a href="index.html">
+                      <h3>Billing Info</h3>
+                  <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+                  <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+                      <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                  </a></li>
+                 
+              </ul>
+          </div>
+      </div>
+    </div>
+    <div data-role="footer">
+      <H1>
+        ©KVH 
+      </H1>  
+    </div>
+  </div> <!--! end of #container -->
+
+  <div data-role="page" id="page3"  data-theme="a" data-content-theme="b">
+    <div data-role="header">
+      <a href="#page2" data-icon="back" data-transition="slide">Back</a>
+        <H1>Billing info. Dravo Costa Dorada </H1>
+      <a href="#page2" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Menu</a>
+    </div>
+    <div data-role="main" class="ui-content">
+        <H2> 
+            <img src="../img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;10.61.24.42   Terminal: V7 
+        </H2>
+         <ul data-role="listview" data-inset="true">
+            <li data-role="list-divider">Billing Account<span class="ui-li-count">1</span></li>
+            <li>  
+            <p>Customer Number:&nbsp;<strong>7639</strong></p>
+            <p>Cusotomer Name:&nbsp;<strong>"VOS APHRODITE"</strong></p>
+            <p>Plan type:&nbsp;<strong>VSAT Fixed</strong></p>
+                <p class="ui-li-aside">Upd:<strong>&nbsp;2015-02-25</strong></p>
+            </li>
+           
+            <li data-role="list-divider">Plan Information<span class="ui-li-count">4</span></li>
+            <li>
+             <h2>Bundle</h2>
+            <p><strong>Vroonplan</strong></p>
+            <p>Bill Desc:<strong>Vroon Plan</strong>, Item Code: <strong>Vroonplan</strong>, Base Plan: <strong>F4</strong>, Cycle: </strong>A</strong></p>
+                <p class="ui-li-aside"><strong>2012-12-05</strong></p>
+            </li>
+            <li>
+            <h2>Call Package</h2>
+            <p><strong>Vroon Free Overage</strong></p>
+            <p>Vroon Free Overage, Item Code: <strong>802</strong>, Base Plan: <strong>F4</strong>, Cycle: </strong>A</strong></p>
+                <p class="ui-li-aside"><strong>2012-12-05</strong></p>
+            </li>
+            <li>
+            <h2>Call Package</h2>
+            <p><strong>Vroon 10,000 MB</strong></p>
+            <p>Vroon 2000 MB, Item Code: <strong>800</strong>, Base Plan: <strong>F4</strong>, Cycle: </strong>A</strong></p>
+                <p class="ui-li-aside"><strong>2012-12-05</strong></p>
+            </li>
+            <li>
+            <h2>Call Package</h2>
+            <p><strong>Vroon 2000 MB</strong></p>
+            <p>Vroon 2000 MB, Item Code: <strong>801</strong>, Base Plan: <strong>F4</strong>, Cycle: </strong>A</strong></p>
+                <p class="ui-li-aside"><strong>2012-12-05</strong></p>
+            </a></li>
+        </ul>
+        
+    </div>
+    <div data-role="footer">
+      <H1>
+        ©KVH  
+      </H1>  
+    </div>   
+  </div> <!--! end of #container -->
+
+  <div data-role="page" id="page4"  data-theme="a" data-content-theme="b">
+    <div data-role="header">
+      <a href="#page2" data-icon="back" data-transition="slide">Back</a>
+        <H1>CommBox info</H1>
+      <a href="#page2" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Menu</a>
+    </div>
+    <div data-role="main" class="ui-content">
+        <H2> 
+            <img src="../img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;10.61.24.42   Terminal: V7 
+        </H2>
+         <ul data-role="listview" data-inset="true">
+            <li data-role="list-divider">Billing Account<span class="ui-li-count">1</span></li>
+            <li>  
+            <p>Customer Number:&nbsp;<strong>7639</strong></p>
+            <p>Cusotomer Name:&nbsp;<strong>"VOS APHRODITE"</strong></p>
+            <p>Plan type:&nbsp;<strong>VSAT Fixed</strong></p>
+                <p class="ui-li-aside">Upd:<strong>&nbsp;2015-02-25</strong></p>
+            </li>
+           
+            <li data-role="list-divider">Plan Information<span class="ui-li-count">4</span></li>
+            <li>
+             <h2>Bundle</h2>
+            <p><strong>Vroonplan</strong></p>
+            <p>Bill Desc:<strong>Vroon Plan</strong>, Item Code: <strong>Vroonplan</strong>, Base Plan: <strong>F4</strong>, Cycle: </strong>A</strong></p>
+                <p class="ui-li-aside"><strong>2012-12-05</strong></p>
+            </li>
+            <li>
+            <h2>Call Package</h2>
+            <p><strong>Vroon Free Overage</strong></p>
+            <p>Vroon Free Overage, Item Code: <strong>802</strong>, Base Plan: <strong>F4</strong>, Cycle: </strong>A</strong></p>
+                <p class="ui-li-aside"><strong>2012-12-05</strong></p>
+            </li>
+            <li>
+            <h2>Call Package</h2>
+            <p><strong>Vroon 10,000 MB</strong></p>
+            <p>Vroon 2000 MB, Item Code: <strong>800</strong>, Base Plan: <strong>F4</strong>, Cycle: </strong>A</strong></p>
+                <p class="ui-li-aside"><strong>2012-12-05</strong></p>
+            </li>
+            <li>
+            <h2>Call Package</h2>
+            <p><strong>Vroon 2000 MB</strong></p>
+            <p>Vroon 2000 MB, Item Code: <strong>801</strong>, Base Plan: <strong>F4</strong>, Cycle: </strong>A</strong></p>
+                <p class="ui-li-aside"><strong>2012-12-05</strong></p>
+            </a></li>
+        </ul>
+        
+    </div>
+    <div data-role="footer">
+      <H1>
+        ©KVH  
+      </H1>  
+    </div>   
+  </div> <!--! end of #container -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+<!--
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+-->
+
+  <!-- scripts concatenated and minified via ant build script -->
+<!--  <script src="js/mylibs/helper.js"></script>-->
+  <!-- end concatenated and minified scripts-->
+
+<!--
+  <script>
+    // iPhone Scale Bug Fix, read this when using http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
+    MBP.scaleFix();
+  </script>
+-->
+
+
+</body>
+</html>
