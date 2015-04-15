@@ -152,10 +152,11 @@
                   <p>Plan type:&nbsp;<strong>VSAT Fixed</strong></p>
                       <p class="ui-li-aside">Update:<strong> 2015-02-25</strong></p>
                   </a></li>
-                  <li><a href="index.html">
+                  <li><a href="#page8">
                       <h3>MTD Alerts</h3>
-                  <p><strong>Boston Conference Planning</strong></p>
-                  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+                  <p>Current Data Plan: <strong>VSAT OP500 - 500 MB / 12 Month</strong></p>
+                  <p>This Month’s Usage: <strong>90</strong> Mb, Overage: <strong>30</strong> Mb</p>
+<!--                  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>-->
                       <p class="ui-li-aside"><strong>9:18</strong>AM</p>
                   </a></li>
 <!--
@@ -179,8 +180,8 @@
                       <p class="ui-li-aside"><strong>9:18</strong>AM</p>
                   </a></li>
 -->
-                  <li><a href="index.html">
-                      <h3>Protocol Report</h3>
+                  <li><a href="#">
+                  <h3>Protocol Report</h3>
                   <p><strong>Boston Conference Planning</strong></p>
                   <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
                       <p class="ui-li-aside"><strong>9:18</strong>AM</p>
@@ -532,9 +533,98 @@
           <input type="text" name="lname" id="fname">
           <input type="submit" value="Submit">
           <a href="#page6" class="ui-btn">Cancel</a>
-  
-        </form>
-        
+        </form>       
+    </div>
+    <div data-role="footer">
+      <H1>
+        ©KVH  
+      </H1>  
+    </div>   
+  </div> <!--! end of #container -->
+
+
+ <div data-role="page" id="page8" data-theme="a" data-content-theme="b">
+    <div data-role="header">
+      <a href="#page4" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
+        <H1>Users and Allocations</H1>
+          <a href="#popupMenu6" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
+      <div data-role="popup" id="popupMenu6" data-theme="a">
+        <ul data-role="listview" data-inset="true" style="min-width:100px;">
+          <li data-role="list-divider">Choose an action</li>
+          <li><a href="#page1">Home</a></li>
+          <li><a href="http://staging.mykvh.com">KVH Full</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <div data-role="main" class="ui-content">
+      <p>Configure Allocation Profiles, Usernames and Passwords.
+<strong>Note</strong>      that in order to use feature, an ICM Network Configuration with User Logins must be selected.</p>
+      <div data-role="tabs" id="tabs">
+        <div data-role="navbar" data-iconpos="left">
+          <ul>
+            <li><a href="#one" data-ajax="false" class="ui-btn-active" data-icon="clock">Allocation Profiles</a></li>
+            <li><a href="#two" data-ajax="false" data-icon="user">Users</a></li>
+          </ul>
+        </div>
+<!--          <div id="one" class="ui-body-d ui-content">-->
+          <div id="one" >
+            <ul data-role="listview" data-inset="true" data-split-icon="delete">
+    <li data-role="list-divider">Configure Allocation Profiles<span class="ui-li-count">2</span></li>
+              <li><a href="#page7" data-transition="slide">
+                <p>Profile Name:<strong> Light</strong></p>
+                <p>Allocation:<strong> 30</strong> min/day</p>
+                <p>Period:<strong> 2015-01-15 .. 2015-06-15</strong></p></a><a href="#deleteProfile" data-rel="popup" data-position-to="window" data-transition="pop">Delete profile</a></li>
+              <li><a href="#page7" data-transition="slide">
+                <p>Profile Name:<strong> Gimme more</strong></p>
+                <p>Allocation:<strong> 500</strong> mb/day</p>
+                <p>Period:<strong> 2015-01-15 .. 2015-06-15</strong></p></a><a href="#deleteProfile" data-rel="popup" data-position-to="window" data-transition="pop">Delete profile</a></li>
+
+            </ul>
+          </div>
+          <div id="two">
+          <ul data-role="listview" data-inset="true" data-split-icon="delete">
+            <li data-role="list-divider">Configure Users<span class="ui-li-count">6</span></li>
+            <li><a href="#page7" data-transition="slide">
+              <p>User Name:<strong> jdoe</strong></p>
+              <p>Full Name:<strong> John Doe</strong></p>
+              <p>Allocation Profile:<strong> Light</strong></p></a><a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+            <li><a href="#page7" data-transition="slide">
+              <p>User Name:<strong> syoyohanson-john</strong></p>
+              <p>Full Name:<strong> Jhonathan Yohansonsonson </strong></p>
+              <p>Allocation Profile:<strong> Gimme More</strong></p></a><a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+            <li><a href="#page7" data-transition="slide">
+              <p>User Name:<strong> jdoe</strong></p>
+              <p>Full Name:<strong> John Doe</strong></p>
+              <p>Allocation Profile:<strong> Light</strong></p></a><a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+            <li><a href="#page7" data-transition="slide">
+              <p>User Name:<strong> syoyohanson-john</strong></p>
+              <p>Full Name:<strong> Jhonathan Yohansonsonson </strong></p>
+              <p>Allocation Profile:<strong> Gimme More</strong></p></a><a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+             <li><a href="#page7" data-transition="slide">
+              <p>User Name:<strong> jdoe</strong></p>
+              <p>Full Name:<strong> John Doe</strong></p>
+              <p>Allocation Profile:<strong> Light</strong></p></a><a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+            <li><a href="#page7" data-transition="slide">
+              <p>User Name:<strong> syoyohanson-john</strong></p>
+              <p>Full Name:<strong> Jhonathan Yohansonsonson </strong></p>
+              <p>Allocation Profile:<strong> Gimme More</strong></p></a><a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+        </ul>
+                    
+        </div>
+      </div> 
+        <div data-role="popup" id="deleteProfile" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+            <h3>Delete Profile?</h3>
+        <p>This allocation profile will be deleted and users will not be allocated to it.</p>
+            <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">Delete</a>
+            <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini">Cancel</a>
+        </div>
+       <div data-role="popup" id="deleteUser" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+            <h3>Delete User?</h3>
+        <p>This user will be deleted and lose access to the system.</p>
+            <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">Delete</a>
+            <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini" data-direction="reverse">Cancel</a>
+        </div>
     </div>
     <div data-role="footer">
       <H1>
