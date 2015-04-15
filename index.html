@@ -67,6 +67,7 @@
       <div data-role="popup" id="popupMenu" data-theme="a">
         <ul data-role="listview" data-inset="true" style="min-width:100px;">
           <li data-role="list-divider">Choose an action</li>
+          <li><a href="#page1">Home</a></li>
           <li><a href="http://staging.mykvh.com">KVH Full</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
@@ -98,14 +99,15 @@
     <div data-role="header">
         <a href="#page1" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
         <H1>Vessel Details. Dravo Costa Dorada </H1>
-        <a href="#popupMenu2" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
-          <div data-role="popup" id="popupMenu2" data-theme="a">
-            <ul data-role="listview" data-inset="true" style="min-width:100px;">
-              <li data-role="list-divider">Choose an action</li>
-              <li><a href="http://staging.mykvh.com">KVH Full</a></li>
-              <li><a href="#">Logout</a></li>
-            </ul>
-          </div>
+        <a href="#popupMenu1" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
+      <div data-role="popup" id="popupMenu1" data-theme="a">
+        <ul data-role="listview" data-inset="true" style="min-width:100px;">
+          <li data-role="list-divider">Choose an action</li>
+          <li><a href="#page1">Home</a></li>
+          <li><a href="http://staging.mykvh.com">KVH Full</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
     </div>
     <div data-role="main" class="ui-content">
         <H1> 
@@ -231,7 +233,15 @@
     <div data-role="header">
       <a href="#page2" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
         <H1>Billing info. Dravo Costa Dorada </H1>
-      <a href="#page2" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Menu</a>
+        <a href="#popupMenu3" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
+      <div data-role="popup" id="popupMenu3" data-theme="a">
+        <ul data-role="listview" data-inset="true" style="min-width:100px;">
+          <li data-role="list-divider">Choose an action</li>
+          <li><a href="#page1">Home</a></li>
+          <li><a href="http://staging.mykvh.com">KVH Full</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
     </div>
     <div data-role="main" class="ui-content">
         <H2> 
@@ -285,18 +295,31 @@
     <div data-role="header">
       <a href="#page2" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
         <H1>CommBox info</H1>
-      <a href="#page2" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Menu</a>
+        <a href="#popupMenu4" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
+      <div data-role="popup" id="popupMenu4" data-theme="a">
+        <ul data-role="listview" data-inset="true" style="min-width:100px;">
+          <li data-role="list-divider">Choose an action</li>
+          <li><a href="#page1">Home</a></li>
+          <li><a href="http://staging.mykvh.com">KVH Full</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
     </div>
     <div data-role="main" class="ui-content"><h2><img src="img/icons/cbx/cbx-online.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;Current Configuration</h2>
           <p>Modem IP&nbsp;<strong>10.61.12.199</strong></p>
           <p>ICM Version:&nbsp;<strong>108</strong></p>
           <p>ICM Configuration:&nbsp;<strong>Default ICM-12232-14</strong></p>
-          <p><img src="img/CBXPorts3.png" alt="online" class=""><img src="img/CBXPorts4.png" alt="online" class=""></p><br>
+<!--
+      <a href="#popupInfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Learn more">Learn more</a>
+            <div data-role="popup" id="popupInfo" class="ui-content" data-theme="a" style="max-width:350px;">
+              <p>Here is a <strong>tiny popup</strong> being used like a tooltip. The text will wrap to multiple lines as needed.</p></div>
+-->
+          <p><img src="img/CBXPorts3.png" alt="online" class=""><img src="img/CBXPorts4.png" alt="online" class=""></p><p>The default configuration provides standard mini-VSAT service on all 4 Ethernet ports and Wi-FI</p>
           <ul data-role="listview" data-inset="true">
-              <li data-role="list-divider">Settings<span class="ui-li-count">3</span></li>
+             <li data-role="list-divider">Settings<span class="ui-li-count">3</span></li>
              <li><a href="#page5" data-transition="slide">Network Configuration </a></li>
              <li><a href="#page6" data-transition="slide">Users and Allocations </a></li>
-             <li><a href="#page7" data-transition="slide">WiFi Serttings</a></li>
+             <li>WiFi Settings</li>
           </ul>
     </div>
     <div data-role="footer">
@@ -311,7 +334,15 @@
       <a href="#page4" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
 <!--        <H1>Configure mini-VSAT ICM</H1>-->
             <H1>Change Network Configuration</H1>
-      <a href="#page2" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Menu</a>
+        <a href="#popupMenu5" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
+      <div data-role="popup" id="popupMenu5" data-theme="a">
+        <ul data-role="listview" data-inset="true" style="min-width:100px;">
+          <li data-role="list-divider">Choose an action</li>
+          <li><a href="#page1">Home</a></li>
+          <li><a href="http://staging.mykvh.com">KVH Full</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
     </div>
     <div data-role="main" class="ui-content">
 <!--      <h2><img src="img/icons/cbx/cbx-online.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;Change Network Config</h2>-->
@@ -370,8 +401,7 @@
 
 <!--          <input type="submit" value="Submit" data-theme="b" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">-->
         <a href="#saveConfig" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline" data-rel="popup" data-position-to="window" data-transition="pop">Save</a>
-        <a href="#page4" class="ui-shadow ui-btn ui-corner-all ui-btn-inline">Cancel</a>
- 
+        <a href="#page4" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-direction="reverse">Cancel</a>
         <div data-role="popup" id="saveConfig" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
             <h3>Modifying configuration!</h3>
         <p>New configuration will be applied during the next hour.</p>
@@ -390,7 +420,15 @@
     <div data-role="header">
       <a href="#page4" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
         <H1>Users and Allocations</H1>
-      <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Menu</a>
+          <a href="#popupMenu6" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
+      <div data-role="popup" id="popupMenu6" data-theme="a">
+        <ul data-role="listview" data-inset="true" style="min-width:100px;">
+          <li data-role="list-divider">Choose an action</li>
+          <li><a href="#page1">Home</a></li>
+          <li><a href="http://staging.mykvh.com">KVH Full</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
     </div>
     <div data-role="main" class="ui-content">
       <p>Configure Allocation Profiles, Usernames and Passwords.
@@ -458,7 +496,7 @@
             <h3>Delete User?</h3>
         <p>This user will be deleted and lose access to the system.</p>
             <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">Delete</a>
-            <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini">Cancel</a>
+            <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini" data-direction="reverse">Cancel</a>
         </div>
     </div>
     <div data-role="footer">
@@ -472,7 +510,15 @@
     <div data-role="header">
       <a href="#page6" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
         <H1>Edit/Create new Allocation</H1>
-      <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Menu</a>
+        <a href="#popupMenu7" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
+      <div data-role="popup" id="popupMenu7" data-theme="a">
+        <ul data-role="listview" data-inset="true" style="min-width:100px;">
+          <li data-role="list-divider">Choose an action</li>
+          <li><a href="#page1">Home</a></li>
+          <li><a href="http://staging.mykvh.com">KVH Full</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
     </div>
     <div data-role="main" class="ui-content">
          <form method="post" action="#page6">
