@@ -290,8 +290,7 @@
           <img src="img/CBXPorts2.png" alt="online" class="">
       
           <ul data-role="listview" data-inset="false">
-
-            <li data-role="list-divider">Settings<span class="ui-li-count">3</span></li>
+             <li data-role="list-divider">Settings<span class="ui-li-count">3</span></li>
              <li><a href="#page5" data-transition="slide">Network Configuration </a></li>
              <li><a href="#page6" data-transition="slide">Users and Allocations </a></li>
              <li><a href="#page7" data-transition="slide">WiFi Serttings</a></li>
@@ -364,6 +363,76 @@
                 <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Save</a>
             </div>
         </div>
+    </div>
+    <div data-role="footer">
+      <H1>
+        ©KVH  
+      </H1>  
+    </div>   
+  </div> <!--! end of #container -->
+
+ <div data-role="page" id="page6"  data-theme="a" data-content-theme="b">
+    <div data-role="header">
+      <a href="#page4" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
+        <H1>Users and Allocations</H1>
+      <a href="#page4" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Menu</a>
+    </div>
+    <div data-role="main" class="ui-content">
+      <p>Configure Allocation Profiles, Usernames and Passwords.
+<strong>Note</strong>      that in order to use feature, an ICM Network Configuration with User Logins must be selected.</p>
+
+<!--        <h2><img src="img/icons/cbx/cbx-online.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;Current Configuration</h2>-->
+
+<!--          <h3><img src="img/CBXPorts3.png" alt="online" class=""><img src="img/CBXPorts4.png" alt="online" class=""></h3>-->
+<!--          <p>New configuration will be applied soon...</p>-->
+        <ul data-role="listview" data-inset="false">
+            <li data-role="list-divider">Allocations<span class="ui-li-count">3</span></li>
+            <li><a href="#page7" data-transition="slide">
+              <p>Profile Name:<strong> Light Allocation</strong></p>
+              <p>Allocation:<strong> 300</strong> min/day</p>
+              <p>Period:<strong> 2015-01-15 .. 2015-06-15</strong></p></a></li>
+            <li><a href="#page7" data-transition="slide">
+              <p>Profile Name:<strong> Light Allocation</strong></p>
+              <p>Allocation:<strong> 300</strong> min/day</p>
+              <p>Period:<strong> 2015-01-15 .. 2015-06-15</strong></p></a></li>
+            <li><a href="#page7" data-transition="slide">
+              <p>Profile Name:<strong> Light Allocation</strong></p>
+              <p>Allocation:<strong> 300</strong> min/day</p>
+              <p>Period:<strong> 2015-01-15 .. 2015-06-15</strong></p></a></li>
+            <li data-role="list-divider">Users<span class="ui-li-count">3</span></li>
+            <li><a href="#page7" data-transition="slide">Network Configuration </a></li>
+            <li><a href="#page7" data-transition="slide">Users and Allocations </a></li>
+            <li><a href="#page7" data-transition="slide">WiFi Serttings</a></li>
+        </ul>
+        
+    </div>
+    <div data-role="footer">
+      <H1>
+        ©KVH  
+      </H1>  
+    </div>   
+  </div> <!--! end of #container -->
+
+ <div data-role="page" id="page7"  data-theme="a" data-content-theme="b">
+    <div data-role="header">
+      <a href="#page4" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
+        <H1>Edit/Create new Allocation</H1>
+      <a href="#page4" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Menu</a>
+    </div>
+    <div data-role="main" class="ui-content">
+         <form method="post" action="demoform.asp">
+          <label for="fname">Profile name:</label>
+          <input type="text" name="fname" id="fname">
+          <label for="alloc">Allocation:</label>
+          <input type="text" name="alloc" id="alloc">
+          <label for="lname">Allocation Type:</label>
+          <input type="text" name="lname" id="fname">
+          <label for="lname">Allocation Period:</label>
+          <input type="text" name="lname" id="fname">
+          <input type="submit" value="Submit">
+          <input type="submit" value="Cancel">
+        </form>
+        
     </div>
     <div data-role="footer">
       <H1>
