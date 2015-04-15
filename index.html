@@ -73,7 +73,7 @@
       </div>
     </div>
     <div data-role="main" class="ui-content"><form ><input id="filter-for-listview" data-type="search" placeholder="Type to search terminals..."></form></BR>
-      <ul data-role="listview" data-inset="false" data-filter="true" data-input="#filter-for-listview">
+      <ul data-role="listview" data-inset="true" data-filter="true" data-input="#filter-for-listview">
           <li><a href="#page2" data-transition="slide"><img src="img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">10.61.41.116 Club Med 2 </a></li>
           <li><a href="#page2" data-transition="slide"><img src="img/icons/terminals/offline/big.png" alt="online" class="ui-li-icon ui-corner-none">110.61.41.777 Nordic Apollo</a></li>
           <li><a href="#page2" data-transition="slide"><img src="img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">110.61.46.214 Nordic Vega</a></li>
@@ -137,7 +137,7 @@
 
 <div data-role="collapsibleset" data-theme="a" data-content-theme="b">
 
-    <div data-role="collapsible" data-inset="false">
+    <div data-role="collapsible" data-inset="true">
           <h2><img src="img/icons/systems/system.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;System  1. V7 10.61.40.214. Commbox</h2>
               <ul data-role="listview" data-theme="a" data-divider-theme="d">
                   <!-- TERMINAL LAYOUT -->
@@ -156,6 +156,7 @@
                   <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
                       <p class="ui-li-aside"><strong>9:18</strong>AM</p>
                   </a></li>
+<!--
                   <li><a href="index.html">
                       <h3>MTD Usage</h3>
                   <p><strong>Boston Conference Planning</strong></p>
@@ -175,6 +176,7 @@
                   <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
                       <p class="ui-li-aside"><strong>9:18</strong>AM</p>
                   </a></li>
+-->
                   <li><a href="index.html">
                       <h3>Protocol Report</h3>
                   <p><strong>Boston Conference Planning</strong></p>
@@ -184,11 +186,13 @@
                 <!-- COMMBOX LAYOUT -->
                   <li data-role="list-divider"><img src="img/icons/cbx/cbx-online.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;&nbsp;CommBox 1  <span class="ui-li-count">2</span></li>
                   <li><a href="#page4">
-                      <h3>Current Configuration</h3>
-                  <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-                  <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+                  <h3>Current Configuration</h3>
+                  <p>Modem IP: <strong>10.61.12.199</strong></p>
+                  <p>ICM Version: <strong>108</strong></p>
+                  <p>ICM Configuration: <strong>Default ICM-12232-14</strong></p>
                       <p class="ui-li-aside"><strong>6:24</strong>PM</p>
                   </a></li>
+              
                 <!-- Media LAYOUT -->
                   <li data-role="list-divider"><img src="img/icons/medias/media-online.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;&nbsp;MediaServer 1  <span class="ui-li-count">2</span></li>
 <!--
@@ -201,7 +205,7 @@
 -->
               </ul>
           </div>
-          <div data-role="collapsible" data-inset="false">
+          <div data-role="collapsible" data-inset="true">
 <h2><img src="img/icons/systems/system.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;System 2. V11 10.61.41.45</h2>
               <ul data-role="listview" data-split-icon="gear"  data-theme="a" data-divider-theme="d">
                <li data-role="list-divider"><img src="img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;&nbsp;10.61.24.42&nbsp;&nbsp; Terminal: V7 <img src="img/icons/up1.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/signal/online-2.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/down1.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/signal/online-3.png" alt="online" class="ui-li-icon ui-corner-none">  <span class="ui-li-count">~ 12 hrs ago</span></li>
@@ -233,7 +237,7 @@
         <H2> 
             <img src="img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;10.61.24.42   Terminal: V7 
         </H2>
-         <ul data-role="listview" data-inset="false">
+         <ul data-role="listview" data-inset="true">
             <li data-role="list-divider">Billing Account<span class="ui-li-count">1</span></li>
             <li>  
             <p>Customer Number:&nbsp;<strong>7639</strong></p>
@@ -261,7 +265,7 @@
             <p>Vroon 2000 MB, Item Code: <strong>800</strong>, Base Plan: <strong>F4</strong>, Cycle: </strong>A</strong></p>
                 <p class="ui-li-aside"><strong>2012-12-05</strong></p>
             </li>
-            <li>
+              <li>
             <h2>Call Package</h2>
             <p><strong>Vroon 2000 MB</strong></p>
             <p>Vroon 2000 MB, Item Code: <strong>801</strong>, Base Plan: <strong>F4</strong>, Cycle: </strong>A</strong></p>
@@ -285,13 +289,11 @@
     </div>
     <div data-role="main" class="ui-content"><h2><img src="img/icons/cbx/cbx-online.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;Current Configuration</h2>
           <p>Modem IP&nbsp;<strong>10.61.12.199</strong></p>
-          <p>ICM Versione:&nbsp;<strong>108</strong></p>
+          <p>ICM Version:&nbsp;<strong>108</strong></p>
           <p>ICM Configuration:&nbsp;<strong>Default ICM-12232-14</strong></p>
-          <p><img src="img/CBXPorts3.png" alt="online" class=""><img src="img/CBXPorts4.png" alt="online" class=""></p>
-          </BR>
-      
-          <ul data-role="listview" data-inset="false">
-             <li data-role="list-divider">Settings<span class="ui-li-count">3</span></li>
+          <p><img src="img/CBXPorts3.png" alt="online" class=""><img src="img/CBXPorts4.png" alt="online" class=""></p></BR>
+          <ul data-role="listview" data-inset="true">
+              <li data-role="list-divider">Settings<span class="ui-li-count">3</span></li>
              <li><a href="#page5" data-transition="slide">Network Configuration </a></li>
              <li><a href="#page6" data-transition="slide">Users and Allocations </a></li>
              <li><a href="#page7" data-transition="slide">WiFi Serttings</a></li>
@@ -307,19 +309,18 @@
  <div data-role="page" id="page5"  data-theme="a" data-content-theme="b">
     <div data-role="header">
       <a href="#page4" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
-        <H1>Network configuration</H1>
+        <H1>Configure mini-VSAT ICMn</H1>
       <a href="#page2" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Menu</a>
     </div>
     <div data-role="main" class="ui-content">
 
 
-        <h2><img src="img/icons/cbx/cbx-online.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;Current Configuration</h2>
+        <h2><img src="img/icons/cbx/cbx-online.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;Network configuration</h2>
 
           <h3><img src="img/CBXPorts3.png" alt="online" class=""><img src="img/CBXPorts4.png" alt="online" class=""></h3>
           <p>New configuration will be applied soon...</p>
-    
-      <fieldset id="custom-fieldset" data-role="controlgroup" data-inset="false">
-	 <legend>Select from available turnkeys:</legend>
+    <fieldset id="custom-fieldset" data-role="controlgroup" data-inset="true">
+      <legend>Select Desired Configuration</legend>
      	<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" style="javascript:$(document).on('pagebeforeshow', '#index', function(){       
     $('#custom-fieldset').find('#radio-choice-1').on('click', function(){      
         $('#popupDialog').popup('open');
@@ -376,36 +377,76 @@
     <div data-role="header">
       <a href="#page4" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
         <H1>Users and Allocations</H1>
-      <a href="#page4" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Menu</a>
+      <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Menu</a>
     </div>
     <div data-role="main" class="ui-content">
       <p>Configure Allocation Profiles, Usernames and Passwords.
 <strong>Note</strong>      that in order to use feature, an ICM Network Configuration with User Logins must be selected.</p>
+      <div data-role="tabs" id="tabs">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#one" data-ajax="false" class="ui-tabs-anchor ui-btn-active ">Allocation Profiles</a></li>
+            <li><a href="#two" data-ajax="false">Users</a></li>
+          </ul>
+        </div>
+<!--          <div id="one" class="ui-body-d ui-content">-->
+          <div id="one" >
+            <ul data-role="listview" data-inset="true" data-split-icon="delete">
+    <li data-role="list-divider">Configure Allocation Profiles<span class="ui-li-count">2</span></li>
+              <li><a href="#page7" data-transition="slide">
+                <p>Profile Name:<strong> Light</strong></p>
+                <p>Allocation:<strong> 30</strong> min/day</p>
+                <p>Period:<strong> 2015-01-15 .. 2015-06-15</strong></p></a><a href="#deleteProfile" data-rel="popup" data-position-to="window" data-transition="pop">Delete profile</a></li>
+              <li><a href="#page7" data-transition="slide">
+                <p>Profile Name:<strong> Gimme more</strong></p>
+                <p>Allocation:<strong> 500</strong> mb/day</p>
+                <p>Period:<strong> 2015-01-15 .. 2015-06-15</strong></p></a><a href="#deleteProfile" data-rel="popup" data-position-to="window" data-transition="pop">Delete profile</a></li>
 
-<!--        <h2><img src="img/icons/cbx/cbx-online.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;Current Configuration</h2>-->
-
-<!--          <h3><img src="img/CBXPorts3.png" alt="online" class=""><img src="img/CBXPorts4.png" alt="online" class=""></h3>-->
-<!--          <p>New configuration will be applied soon...</p>-->
-        <ul data-role="listview" data-inset="false">
-            <li data-role="list-divider">Allocations<span class="ui-li-count">3</span></li>
+            </ul>
+          </div>
+          <div id="two">
+          <ul data-role="listview" data-inset="true" data-split-icon="delete">
+            <li data-role="list-divider">Configure Users<span class="ui-li-count">6</span></li>
             <li><a href="#page7" data-transition="slide">
-              <p>Profile Name:<strong> Light Allocation</strong></p>
-              <p>Allocation:<strong> 300</strong> min/day</p>
-              <p>Period:<strong> 2015-01-15 .. 2015-06-15</strong></p></a></li>
+              <p>User Name:<strong> jdoe</strong></p>
+              <p>Full Name:<strong> John Doe</strong></p>
+              <p>Allocation Profile:<strong> Light</strong></p></a><a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
             <li><a href="#page7" data-transition="slide">
-              <p>Profile Name:<strong> Light Allocation</strong></p>
-              <p>Allocation:<strong> 300</strong> min/day</p>
-              <p>Period:<strong> 2015-01-15 .. 2015-06-15</strong></p></a></li>
+              <p>User Name:<strong> syoyohanson-john</strong></p>
+              <p>Full Name:<strong> Jhonathan Yohansonsonson </strong></p>
+              <p>Allocation Profile:<strong> Gimme More</strong></p></a><a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
             <li><a href="#page7" data-transition="slide">
-              <p>Profile Name:<strong> Light Allocation</strong></p>
-              <p>Allocation:<strong> 300</strong> min/day</p>
-              <p>Period:<strong> 2015-01-15 .. 2015-06-15</strong></p></a></li>
-            <li data-role="list-divider">Users<span class="ui-li-count">3</span></li>
-            <li><a href="#page7" data-transition="slide">Network Configuration </a></li>
-            <li><a href="#page7" data-transition="slide">Users and Allocations </a></li>
-            <li><a href="#page7" data-transition="slide">WiFi Serttings</a></li>
+              <p>User Name:<strong> jdoe</strong></p>
+              <p>Full Name:<strong> John Doe</strong></p>
+              <p>Allocation Profile:<strong> Light</strong></p></a><a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+            <li><a href="#page7" data-transition="slide">
+              <p>User Name:<strong> syoyohanson-john</strong></p>
+              <p>Full Name:<strong> Jhonathan Yohansonsonson </strong></p>
+              <p>Allocation Profile:<strong> Gimme More</strong></p></a><a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+             <li><a href="#page7" data-transition="slide">
+              <p>User Name:<strong> jdoe</strong></p>
+              <p>Full Name:<strong> John Doe</strong></p>
+              <p>Allocation Profile:<strong> Light</strong></p></a><a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+            <li><a href="#page7" data-transition="slide">
+              <p>User Name:<strong> syoyohanson-john</strong></p>
+              <p>Full Name:<strong> Jhonathan Yohansonsonson </strong></p>
+              <p>Allocation Profile:<strong> Gimme More</strong></p></a><a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
         </ul>
-        
+                    
+        </div>
+      </div> 
+        <div data-role="popup" id="deleteProfile" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+            <h3>Delete Profile?</h3>
+        <p>This allocation profile will be deleted and users will not be allocated to it.</p>
+            <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">Delete</a>
+            <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini">Cancel</a>
+        </div>
+       <div data-role="popup" id="deleteUser" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+            <h3>Delete User?</h3>
+        <p>This user will be deleted and lose access to the system.</p>
+            <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">Delete</a>
+            <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini">Cancel</a>
+        </div>
     </div>
     <div data-role="footer">
       <H1>
@@ -422,16 +463,17 @@
     </div>
     <div data-role="main" class="ui-content">
          <form method="post" action="demoform.asp">
-          <label for="fname">Profile name:</label>
+          <label for="fname">Profile name</label>
           <input type="text" name="fname" id="fname">
-          <label for="alloc">Allocation:</label>
+          <label for="alloc">Allocation</label>
           <input type="text" name="alloc" id="alloc">
-          <label for="lname">Allocation Type:</label>
+          <label for="lname">Allocation Type</label>
           <input type="text" name="lname" id="fname">
-          <label for="lname">Allocation Period:</label>
+          <label for="lname">Allocation Period</label>
           <input type="text" name="lname" id="fname">
           <input type="submit" value="Submit">
           <input type="submit" value="Cancel">
+          <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline">Cancel</a>
         </form>
         
     </div>
