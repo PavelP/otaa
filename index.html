@@ -58,16 +58,50 @@
 </head>
 
 <body>
+  <!--  <div class="container">-->
+    <div data-role="page" id="page0"  data-theme="a" data-content-theme="b">
+      <div data-role="header">
+          <a href="#page0" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext">Home</a>
+          <H1>Home</H1>
+          <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
+        <div data-role="popup" id="popupMenu" data-theme="a">
+          <ul data-role="listview" data-inset="true" style="min-width:100px;">
+            <li data-role="list-divider">Choose an action</li>
+            <li><a href="#page0">Home</a></li>
+            <li><a href="http://staging.mykvh.com">KVH Full</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <div data-role="main" class="ui-content"><form >
+      <span>Login</span>
+      <label for="textinput-4" class="ui-hidden-accessible">Text Input:</label>
+      <input type="text" name="textinput-4" id="textinput-4" placeholder="Text input" value="">
+      <span>Password</span>
+      <label for="textinput-4" class="ui-hidden-accessible">Text Input:</label>
+      <input type="text" name="textinput-4" id="textinput-4" placeholder="Text input" value="">
+      <a href="#page1" class="ui-btn ui-btn-inline">LogIn</a></br>
+      <a href="https://kvh.my.salesforce.com/home/home.jsp">Contact Support</a>&nbsp;
+      <a href="http://staging.mykvh.com/app#/map">Full KVH</a>
+
+      </div>
+      <div data-role="footer">
+        <H1>
+          ©KVH
+        </H1>
+      </div>
+    </div> <!--! end of #container -->
+
 <!--  <div class="container">-->
   <div data-role="page" id="page1"  data-theme="a" data-content-theme="b">
     <div data-role="header">
-        <a href="#page1" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext">Home</a>
+        <a href="#page0" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext">Home</a>
         <H1>Vessels</H1>
         <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
       <div data-role="popup" id="popupMenu" data-theme="a">
         <ul data-role="listview" data-inset="true" style="min-width:100px;">
           <li data-role="list-divider">Choose an action</li>
-          <li><a href="#page1">Home</a></li>
+          <li><a href="#page0">Home</a></li>
           <li><a href="http://staging.mykvh.com">KVH Full</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
@@ -97,13 +131,13 @@
 
   <div  data-role="page" id="page2" data-theme="a">
     <div data-role="header">
-        <a href="#page1" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
+        <a href="#page0" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
         <H1>Vessel Details. Dravo Costa Dorada </H1>
         <a href="#popupMenu1" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
       <div data-role="popup" id="popupMenu1" data-theme="a">
         <ul data-role="listview" data-inset="true" style="min-width:100px;">
           <li data-role="list-divider">Choose an action</li>
-          <li><a href="#page1">Home</a></li>
+          <li><a href="#page0">Home</a></li>
           <li><a href="http://staging.mykvh.com">KVH Full</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
@@ -113,79 +147,26 @@
         <H1>
             Dravo Costa Dorada
         </H1>
-      <p>
-      <table data-role="table">
-        <thead>
-          <th>IMO Number:</th>
-          <th>MMSI:</th>
-          <th>Radio Call Sign:</th>
-          <th>Lat / Lon:</th>
-          <th>Speed / COG: </th>
-          <th>Country:</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>8611180	</td>
-            <td>225399000</td>
-            <td>ECCD</td>
-            <td>40.14° / -8.84°</td>
-            <td>0 kn / 90 °</td>
-            <td>Spain</td>
-
-          </tr>
-        </tbody>
-      </table>
-      </p>
-
-<div data-role="collapsibleset" data-theme="a" data-content-theme="b">
-
-    <div data-role="collapsible" data-inset="true">
-          <h2><img src="img/icons/systems/system.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;System  1. V7 10.61.40.214. Commbox</h2>
-              <ul data-role="listview" data-theme="a" data-divider-theme="d">
+          <h3><img src="img/icons/systems/system.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;System  1</h3>
+              <ul data-role="listview" data-theme="a" data-divider-theme="b" data-inset="true">
                   <!-- TERMINAL LAYOUT -->
                   <li data-role="list-divider"><img src="img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;&nbsp;10.61.24.42&nbsp;&nbsp; Terminal: V7 <img src="img/icons/up1.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/signal/online-2.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/down1.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/signal/online-3.png" alt="online" class="ui-li-icon ui-corner-none">  <span class="ui-li-count">~ 12 hrs ago</span></li>
-                  <li><a href="#page3" data-transition="slide">
-                      <h3>Billing Info</h3>
-<!--                  <p><strong>Billing Account  </strong></p>-->
-                  <p>Customer Number:&nbsp;<strong>7639</strong></p>
-                  <p>Cusotomer Name:&nbsp;<strong>"VOS APHRODITE"</strong></p>
-                  <p>Plan type:&nbsp;<strong>VSAT Fixed</strong></p>
-                      <p class="ui-li-aside">Update:<strong> 2015-02-25</strong></p>
-                  </a></li>
-                  <li><a href="#page8">
+
+                  <li><a href="#page9">
                       <h3>Data Plan</h3>
                   <p>Current Data Plan: <strong>VSAT OP500 - 500 MB / 12 Month</strong></p>
                   <p>This Month’s Usage: <strong>90</strong> Mb, Overage: <strong>30</strong> Mb</p>
 <!--                  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>-->
                       <p class="ui-li-aside"><strong>9:18</strong>AM</p>
                   </a></li>
-<!--
-                  <li><a href="index.html">
-                      <h3>MTD Usage</h3>
-                  <p><strong>Boston Conference Planning</strong></p>
-                  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-                      <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+                  <li><a href="#page3" data-transition="slide">
+                      <h3>Network Status</h3>
+                  <p>Connection:&nbsp;<strong>Logged In, 40d 15m</strong></p>
+                  <p>Downlink:&nbsp;<strong>...</strong></p>
+                  <p>Uplink:&nbsp;<strong>...</strong></p>
+                      <p class="ui-li-aside">Update:<strong> 2015-02-25</strong></p>
                   </a></li>
-                  <li><a href="index.html">
-                      <h3>Terminal Utilisation</h3>
-                  <p><strong>Boston Conference Planning</strong></p>
-                  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-                      <p class="ui-li-aside"><strong>9:18</strong>AM</p>
-                  </a>
-                  </li>
-                    <li><a href="index.html">
-                      <h3>Utilization Status</h3>
-                  <p><strong>Boston Conference Planning</strong></p>
-                  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-                      <p class="ui-li-aside"><strong>9:18</strong>AM</p>
-                  </a></li>
--->
-                  <!-- <li><a href="#">
-                  <h3>Protocol Report</h3>
-                  <p><strong>Boston Conference Planning</strong></p>
-                  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-                      <p class="ui-li-aside"><strong>9:18</strong>AM</p>
-                  </a></li> -->
+
                 <!-- COMMBOX LAYOUT -->
                   <li data-role="list-divider"><img src="img/icons/cbx/cbx-online.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;&nbsp;CommBox 1  <span class="ui-li-count">2</span></li>
                   <li><a href="#page4">
@@ -197,20 +178,11 @@
                   </a></li>
 
                 <!-- Media LAYOUT -->
-                  <li data-role="list-divider"><img src="img/icons/medias/media-online.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;&nbsp;MediaServer 1  <span class="ui-li-count">2</span></li>
-<!--
-                  <li><a href="index.html">
-                      <h3>Billing Info</h3>
-                  <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-                  <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
-                      <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                  </a></li>
--->
+                  <li data-role="list-divider" data-theme="b"><img src="img/icons/medias/media-online.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;&nbsp;MediaServer 1  <span class="ui-li-count">2</span></li>
+
               </ul>
-          </div>
-          <div data-role="collapsible" data-inset="true">
-<h2><img src="img/icons/systems/system.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;System 2. V11 10.61.41.45</h2>
-              <ul data-role="listview" data-split-icon="gear"  data-theme="a" data-divider-theme="d">
+            <h3><img src="img/icons/systems/system.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;System 2</h3>
+              <ul data-role="listview" data-split-icon="gear"  data-theme="a" data-divider-theme="b"  data-inset="true">
                <li data-role="list-divider"><img src="img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;&nbsp;10.61.24.42&nbsp;&nbsp; Terminal: V7 <img src="img/icons/up1.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/signal/online-2.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/down1.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/signal/online-3.png" alt="online" class="ui-li-icon ui-corner-none">  <span class="ui-li-count">~ 12 hrs ago</span></li>
                   <li><a href="index.html">
                       <h3>Billing Info</h3>
@@ -220,7 +192,7 @@
                   </a></li>
 
               </ul>
-          </div>
+          <!-- </div>  -->
       </div>
     </div>
     <div data-role="footer">
@@ -230,15 +202,16 @@
     </div>
   </div> <!--! end of #container -->
 
+
   <div data-role="page" id="page3"  data-theme="a" data-content-theme="b">
     <div data-role="header">
       <a href="#page2" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
-        <H1>Billing info. Dravo Costa Dorada </H1>
+        <H1>Data Plan. Dravo Costa Dorada </H1>
         <a href="#popupMenu3" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
       <div data-role="popup" id="popupMenu3" data-theme="a">
         <ul data-role="listview" data-inset="true" style="min-width:100px;">
           <li data-role="list-divider">Choose an action</li>
-          <li><a href="#page1">Home</a></li>
+          <li><a href="#page0">Home</a></li>
           <li><a href="http://staging.mykvh.com">KVH Full</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
@@ -249,35 +222,39 @@
             <img src="img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;10.61.24.42   Terminal: V7
         </H2>
          <ul data-role="listview" data-inset="true">
-            <li data-role="list-divider">Billing Account<span class="ui-li-count">1</span></li>
-            <li>
-                <p>Customer Number:&nbsp;<strong>7639</strong></p>
-                <p>Cusotomer Name:&nbsp;<strong>"VOS APHRODITE"</strong></p>
-                <p>Plan type:&nbsp;<strong>VSAT Fixed</strong></p>
-                <p class="ui-li-aside">Upd:<strong>&nbsp;2015-02-25</strong></p>
-            </li>
-
-            <li data-role="list-divider">Plan Information<span class="ui-li-count">4</span></li>
+            <li data-role="list-divider">Network Status<span class="ui-li-count">4</span></li>
             <li>
                 <h2>Bundle</h2>
-                <p><strong>Vroonplan</strong></p>
-                <p>Bill Desc:<strong>Vroon Plan</strong>, Item Code: <strong>Vroonplan</strong>, Base Plan: <strong>F4</strong>, Cycle: <strong>A</strong></p>
+                <p><strong>Status:</strong> Logged In</p>
+                <p><strong>Uptime:</strong> 40d 15m 30s</p>
                 <p class="ui-li-aside"><strong>2012-12-05</strong></p>
             </li>
             <li>
-                <h2>Call Package</h2>
-                <p><strong>Vroon Free Overage</strong></p>
-                <p>Vroon Free Overage, Item Code: <strong>802</strong>, Base Plan: <strong>F4</strong>, Cycle: <strong>A</strong></p>
+                <h2>Downlink</h2>
+                <p><strong>Status:</strong> Logged In</p>
+                <p><strong>Uptime:</strong> 40d 15m 30s</p>
                 <p class="ui-li-aside"><strong>2012-12-05</strong></p>
             </li>
             <li>
-                <h2>Call Package</h2>
-                <p><strong>Vroon 10,000 MB</strong></p>
-                <p>Vroon 2000 MB, Item Code: <strong>800</strong>, Base Plan: <strong>F4</strong>, Cycle: <strong>A</strong></p>
+                <h2>Uplink</h2>
+                <p><strong>Status:</strong> Logged In</p>
+                <p><strong>Uptime:</strong> 40d 15m 30s</p>
                 <p class="ui-li-aside"><strong>2012-12-05</strong></p>
             </li>
             <li>
-                <h2>Call Package</h2>
+                <h2>Beam</h2>
+                <p><strong>Status:</strong> Logged In</p>
+                <p><strong>Uptime:</strong> 40d 15m 30s</p>
+                <p class="ui-li-aside"><strong>2012-12-05</strong></p>
+            </li>
+            <li>
+                <h2>Configuration</h2>
+                <p><strong>Status:</strong> Logged In</p>
+                <p><strong>Uptime:</strong> 40d 15m 30s</p>
+                <p class="ui-li-aside"><strong>2012-12-05</strong></p>
+            </li>
+            <li>
+                <h2>Position</h2>
                 <p><strong>Vroon 2000 MB</strong></p>
                 <p>Vroon 2000 MB, Item Code: <strong>801</strong>, Base Plan: <strong>F4</strong>, Cycle:<strong>A</strong></p>
                 <p class="ui-li-aside"><strong>2012-12-05</strong></p>
@@ -300,7 +277,7 @@
       <div data-role="popup" id="popupMenu4" data-theme="a">
         <ul data-role="listview" data-inset="true" style="min-width:100px;">
           <li data-role="list-divider">Choose an action</li>
-          <li><a href="#page1">Home</a></li>
+          <li><a href="#page0">Home</a></li>
           <li><a href="http://staging.mykvh.com">KVH Full</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
@@ -319,7 +296,7 @@
           <ul data-role="listview" data-inset="true">
              <li data-role="list-divider">Settings<span class="ui-li-count">3</span></li>
              <li><a href="#page5" data-transition="slide">Network Configuration </a></li>
-             <li><a href="#page6" data-transition="slide">Crew Allocation </a></li>
+             <!-- <li><a href="#page6" data-transition="slide">Crew Allocation </a></li> -->
              <li>WiFi Settings</li>
           </ul>
     </div>
@@ -339,7 +316,7 @@
       <div data-role="popup" id="popupMenu5" data-theme="a">
         <ul data-role="listview" data-inset="true" style="min-width:100px;">
           <li data-role="list-divider">Choose an action</li>
-          <li><a href="#page1">Home</a></li>
+          <li><a href="#page0">Home</a></li>
           <li><a href="http://staging.mykvh.com">KVH Full</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
@@ -385,19 +362,6 @@
      	<label for="radio-choice-9">User Login - Port 1-3, Static - Port 4</label>
       </fieldset>
 
-<!--
-        <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
-            <div data-role="header" data-theme="a">
-            <h1>Save Changes?</h1>
-            </div>
-            <div role="main" class="ui-content">
-                <h3 class="ui-title">Are you sure you want to save changes?</h3>
-            <p>New configuration will be applied in 1h.</p>
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a>
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Save</a>
-            </div>
-        </div>
--->
 
 
 <!--          <input type="submit" value="Submit" data-theme="b" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">-->
@@ -419,13 +383,13 @@
 
  <div data-role="page" id="page6" data-theme="a" data-content-theme="b">
     <div data-role="header">
-      <a href="#page4" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
-        <H1>Users and Allocations</H1>
+      <a href="#page9" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
+        <H1>Crew Allocation</H1>
           <a href="#popupMenu6" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
       <div data-role="popup" id="popupMenu6" data-theme="a">
         <ul data-role="listview" data-inset="true" style="min-width:100px;">
           <li data-role="list-divider">Choose an action</li>
-          <li><a href="#page1">Home</a></li>
+          <li><a href="#page0">Home</a></li>
           <li><a href="http://staging.mykvh.com">KVH Full</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
@@ -433,14 +397,17 @@
     </div>
     <div data-role="main" class="ui-content">
       <p>Configure Allocation Profiles, Usernames and Passwords.
-<strong>Note</strong>      that in order to use feature, an ICM Network Configuration with User Logins must be selected.</p>
-<span>
-  OP2K Allowance: 2000 MB
-  Allocation:<font color="red"> 2160 MB</font>
-  Unallocated: <font color="red">0 MB</font>
-</span>
+        <strong>Note</strong>      that in order to use feature, an ICM Network Configuration with User Logins must be selected.</p>
+        <span>
+          OP2K Allowance: 2000 MB
+          Allocation:<font color="red"> 2160 MB</font>
+          Unallocated: <font color="red">0 MB</font>
+        </span>
+    <!-- </ul> -->
+    <button class="ui-btn ui-btn-inline">Apply Changes to Vessel</button>
+    <a class="ui-btn ui-btn-inline" href="#page7" data-transition="slide" style="width:50%;align:right;">Add New User</a>
       <div data-role="tabs" id="tabs">
-        <div data-role="navbar" data-iconpos="left">
+        <!-- <div data-role="navbar" data-iconpos="left">
           <ul>
             <li><a href="#one" data-ajax="false" class="ui-btn-active" data-icon="clock">Allocation Profiles</a></li>
             <li><a href="#two" data-ajax="false" data-icon="user">Users</a></li>
@@ -454,7 +421,7 @@
             <li><button class="ui-btn ui-btn-inline">Apply Changes to Vessel</button></li>
             <li><a class="ui-btn ui-btn-inline" href="#page7" data-transition="slide" style="width:50%;align:right;">Add New</a></li>
           </ul>
-        </div>
+        </div> -->
 <!--          <div id="one" class="ui-body-d ui-content">-->
           <div id="one" >
             <ul data-role="listview" data-inset="true" data-split-icon="delete">
@@ -471,6 +438,7 @@
             </ul>
           </div>
           <div id="two">
+          <a class="ui-btn ui-btn-inline" href="#page7" data-transition="slide" style="width:50%;align:right;">Add New Profile</a>
           <ul data-role="listview" data-inset="true" data-split-icon="delete">
             <li data-role="list-divider">Configure Users<span class="ui-li-count">6</span></li>
             <li><a href="#page7" data-transition="slide">
@@ -529,7 +497,7 @@
       <div data-role="popup" id="popupMenu7" data-theme="a">
         <ul data-role="listview" data-inset="true" style="min-width:100px;">
           <li data-role="list-divider">Choose an action</li>
-          <li><a href="#page1">Home</a></li>
+          <li><a href="#page0">Home</a></li>
           <li><a href="http://staging.mykvh.com">KVH Full</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
@@ -565,7 +533,7 @@
       <div data-role="popup" id="popupMenu6" data-theme="a">
         <ul data-role="listview" data-inset="true" style="min-width:100px;">
           <li data-role="list-divider">Choose an action</li>
-          <li><a href="#page1">Home</a></li>
+          <li><a href="#page0">Home</a></li>
           <li><a href="http://staging.mykvh.com">KVH Full</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
@@ -644,25 +612,143 @@
       </H1>
     </div>
   </div> <!--! end of #container -->
+  <div data-role="page" id="page9"  data-theme="a" data-content-theme="b">
+    <div data-role="header">
+      <a href="#page2" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
+        <H1>Data Plan. Dravo Costa Dorada </H1>
+        <a href="#popupMenu3" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
+      <div data-role="popup" id="popupMenu3" data-theme="a">
+        <ul data-role="listview" data-inset="true" style="min-width:100px;">
+          <li data-role="list-divider">Choose an action</li>
+          <li><a href="#page0">Home</a></li>
+          <li><a href="http://staging.mykvh.com">KVH Full</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <div data-role="main" class="ui-content">
+        <H2>
+            <img src="img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;10.61.24.42   Terminal: V7
+        </H2>
+         <ul data-role="listview" data-inset="true">
+            <li data-role="list-divider">Data Plan<span class="ui-li-count">1</span></li>
+            <li>
+                <p>Your Data Plan:&nbsp;<strong><font color="green">OP2K</font></strong></p>
+                <p>Monthly Allowance Usage:&nbsp;<strong><font color="orange">1500 MB</font></strong> (55%) of <strong>2.0 GB</strong></p>
+                <p>Overage&nbsp;<strong><font color="">0 MB</font></strong></p>
+                <p>Total Usage:<strong> 0.0 MB</strong></p>
+                <p>(!) Estimated month-to-month usage updated 2015-06-07. Chart does not reflect Pro-Rated Charges due to mid-period plan changes.</p>
+                <p>Plan's Data Speed <strong><font color="green">1500 MB</font>4 Mbps</strong>  <font color="green">1 Mbps</font></strong></p>
+                <p><a href="#page6" class="ui-btn">Crew Allocation</a></p>
+                <p class="ui-li-aside">Upd:<strong>&nbsp;2015-02-25</strong></p>
 
-  <!-- JavaScript at the bottom for fast page loading -->
+            </li>
+            <!-- <li><a href="#page6">
+                <h3>Crew Allocation</h3>
+                <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+            </a></li> -->
+            <!-- <li>
+                <p>Total Usage:<strong> 0.0 MB</strong></p>
+                <p>Estimated month-to-month usage updated 2015-06-07. Chart does not reflect Pro-Rated Charges due to mid-period plan changes.</p>
+                <p class="ui-li-aside"><strong>2012-12-05</strong></p>
+            </li> -->
+            <li data-role="list-divider">Usage Threshold<span class="ui-li-count">4</span></li>
+            <li>
+                <h2>Month Usage </h2>
+                <p>2015-05-15	Data plan changed from VSAT F6 512/2048 2009 to OP2K	</p>
+                <p>2015-05-14	Data plan changed from F6 to FX6</p>
+                <p>2015-05-14	Data plan changed from FX6 to F6</p>
+                <p><a href="#page11" class="ui-btn">Manage Alerts</a></p>
+                <p><font color="red">No Alerts configured yet</font></p>
+                <p class="ui-li-aside"><strong>2012-12-05</strong></p>
+            </li>
+            <!-- <li><a href="#page8">
+                <h3>Manage Alerts</h3>
+            <p><font color="red">No Alerts configured yet</font></p>
+                <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+            </a></li> -->
+        </ul>
 
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-<!--
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
--->
+    </div>
+    <div data-role="footer">
+      <H1>
+        ©KVH
+      </H1>
+    </div>
+  </div> <!--! end of #container -->
 
-  <!-- scripts concatenated and minified via ant build script -->
-<!--  <script src="js/mylibs/helper.js"></script>-->
-  <!-- end concatenated and minified scripts-->
+  <div data-role="page" id="page11" data-theme="a" data-content-theme="b">
+     <div data-role="header">
+       <a href="#page9" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
+         <H1>Who to Notify</H1>
+           <a href="#popupMenu6" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
+       <div data-role="popup" id="popupMenu6" data-theme="a">
+         <ul data-role="listview" data-inset="true" style="min-width:100px;">
+           <li data-role="list-divider">Choose an action</li>
+           <li><a href="#page0">Home</a></li>
+           <li><a href="http://staging.mykvh.com">KVH Full</a></li>
+           <li><a href="#">Logout</a></li>
+         </ul>
+       </div>
+     </div>
+     <div data-role="main" class="ui-content">
+       <p>Add email addresses of recipients who will receive usage alerts via email.</p>
 
-<!--
-  <script>
-    // iPhone Scale Bug Fix, read this when using http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
-    MBP.scaleFix();
-  </script>
--->
+     <!-- </ul> -->
+     <a class="ui-btn ui-btn-inline" href="#page7" data-transition="slide">Add New User</a>
+       <!-- <div data-role="tabs" id="tabs"> -->
+           <div id="one" >
+             <ul data-role="listview" data-inset="true" data-split-icon="delete">
+     <li data-role="list-divider">Email Receipients<span class="ui-li-count">2</span></li>
+               <li><a href="#page7" data-transition="slide">
+                 <p><strong>jack.daniels@gmail.com</strong></p></a>
+                 <a href="#deleteProfile" data-rel="popup" data-position-to="window" data-transition="pop">Delete profile</a></li>
+                 <li><a href="#page7" data-transition="slide">
+                   <p><strong>jack.monk@gmail.com</strong></p></a>
+                   <a href="#deleteProfile" data-rel="popup" data-position-to="window" data-transition="pop">Delete profile</a></li>
+                   <li><a href="#page7" data-transition="slide">
+                     <p><strong>jack.stun@gmail.com</strong></p></a>
+                     <a href="#deleteProfile" data-rel="popup" data-position-to="window" data-transition="pop">Delete profile</a></li>
+             </ul>
+           </div>
+           <div id="two">
+             <p>Add phone numbers of recipients who will receive usage alerts via <strong>text/SMS</strong>.</p>
+           <a class="ui-btn ui-btn-inline" href="#page7" data-transition="slide" >Add New Phone</a>
+           <ul data-role="listview" data-inset="true" data-split-icon="delete">
+             <li data-role="list-divider">Phone Numbers<span class="ui-li-count">6</span></li>
+             <li><a href="#page7" data-transition="slide">
+               <p><strong>+48 123 345 65 78</strong></p>
+               <a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+               <li><a href="#page7" data-transition="slide">
+                 <p><strong>+48 123 345 65 78</strong></p>
+                 <a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+                 <li><a href="#page7" data-transition="slide">
+                   <p><strong>+48 123 345 65 78</strong></p>
+                   <a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+         </ul>
+
+         </div>
+       <!-- </div> -->
+         <div data-role="popup" id="deleteProfile" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+             <h3>Delete Profile?</h3>
+         <p>This allocation profile will be deleted and users will not be allocated to it.</p>
+             <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">Delete</a>
+             <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini">Cancel</a>
+         </div>
+        <div data-role="popup" id="deleteUser" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+             <h3>Delete User?</h3>
+         <p>This user will be deleted and lose access to the system.</p>
+             <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">Delete</a>
+             <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini" data-direction="reverse">Cancel</a>
+         </div>
+     </div>
+     <div data-role="footer">
+       <H1>
+         ©KVH
+       </H1>
+     </div>
+   </div> <!--! end of #container -->
+
 
 <!--</div>-->
 </body>
