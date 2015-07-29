@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title></title>
+  <title>myKVH OTA</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -17,6 +17,7 @@
   <meta name="MobileOptimized" content="320">
 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 
   <!-- Home screen icon  Mathias Bynens http://goo.gl/6nVq0 -->
@@ -55,9 +56,44 @@
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <!--  <link rel="stylesheet" href="css/style.css?v=1">-->
 
+
+
+
+<script>
+$(document).on('pagebeforeshow', '#page2', function(){
+  $('<input>').appendTo('[ data-role="progressbar"]').attr({'name':'slider','id':'slider','data-highlight':'true','min':'0','max':'100','value':'50','type':'range'}).slider({
+      create: function( event, ui ) {
+          $(this).parent().find('input').hide();
+          $(this).parent().find('input').css('margin-left','-9999px'); // Fix for some FF versions
+          $(this).parent().find('.ui-slider-track').css('margin','0 15px 0 15px');
+          $(this).parent().find('.ui-slider-handle').hide();
+      }
+  }).slider("refresh");
+
+  // Test
+  var i = 1;
+  var interval = setInterval(function(){
+      progressBar.setValue('#slider',i+56);
+      // if(i === 100) {
+      //     clearInterval(interval);
+      // }
+      // i++;
+  },100);
+});
+
+var progressBar = {
+  setValue:function(id, value) {
+      $(id).val(value);
+      $(id).slider("refresh");
+  }
+}
+</script>
+
+
 </head>
 
 <body>
+
   <!--  <div class="container">-->
     <div data-role="page" id="page0"  data-theme="a" data-content-theme="b">
       <div data-role="header">
@@ -152,12 +188,26 @@
                   <!-- TERMINAL LAYOUT -->
                   <li data-role="list-divider"><img src="img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;&nbsp;10.61.24.42&nbsp;&nbsp; Terminal: V7 <img src="img/icons/up1.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/signal/online-2.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/down1.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/signal/online-3.png" alt="online" class="ui-li-icon ui-corner-none">  <span class="ui-li-count">~ 12 hrs ago</span></li>
 
-                  <li><a href="#page9">
+                  <li><a href="#page9" data-transition="slide">
                       <h3>Data Plan</h3>
-                  <p>Current Data Plan: <strong>VSAT OP500 - 500 MB / 12 Month</strong></p>
+                  <!-- <p>Current Data Plan: <strong>VSAT OP500 - 500 MB / 12 Month</strong></p>
                   <p>This Month’s Usage: <strong>90</strong> Mb, Overage: <strong>30</strong> Mb</p>
-<!--                  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>-->
-                      <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+                  <!--p><ul>
+                    <li><a href="#page6" class="ui-btn" data-transition="slide">Crew Allocation</a></li>
+                    <li><a href="#page11" class="ui-btn" data-transition="slide">Manage Alerts</a></li>
+                  </ul-->
+                  <p>Your Data Plan:&nbsp;<strong><font color="green">OP2K</font></strong></p>
+                  <p>Monthly Allowance Usage:&nbsp;<strong><font color="orange">1500 MB</font></strong> (55%) of <strong>2.0 GB</strong></p>
+                  <div data-role="progressbar"></div>
+                  <p>Overage&nbsp;<strong><font color="">0 MB</font></strong></p>
+                  <div data-role="progressbars">..</div>
+                  <p>Total Usage:<strong> 1600.0 MB</strong></p>
+                  <p>(!) Estimated month-to-month usage updated 2015-06-07. Chart does not reflect Pro-Rated Charges due to mid-period plan changes.</p>
+                  <p>Plan's Data Speed <strong><font color="green">1500 MB</font>4 Mbps</strong>  <font color="green">1 Mbps</font></strong></p>
+
+                  </p>
+                  <!-- <p><font color="red">No Alerts configured yet</font></p> -->
+                  <p class="ui-li-aside"><strong>9:18</strong>AM</p>
                   </a></li>
                   <li><a href="#page3" data-transition="slide">
                       <h3>Network Status</h3>
@@ -185,7 +235,7 @@
               <ul data-role="listview" data-split-icon="gear"  data-theme="a" data-divider-theme="b"  data-inset="true">
                <li data-role="list-divider"><img src="img/icons/terminals/online/big.png" alt="online" class="ui-li-icon ui-corner-none">&nbsp;&nbsp;&nbsp;10.61.24.42&nbsp;&nbsp; Terminal: V7 <img src="img/icons/up1.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/signal/online-2.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/down1.png" alt="online" class="ui-li-icon ui-corner-none"><img src="img/icons/signal/online-3.png" alt="online" class="ui-li-icon ui-corner-none">  <span class="ui-li-count">~ 12 hrs ago</span></li>
                   <li><a href="index.html">
-                      <h3>Billing Info</h3>
+                      <h3>Data Plan</h3>
                   <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
                   <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
                       <p class="ui-li-aside"><strong>6:24</strong>PM</p>
@@ -297,7 +347,7 @@
              <li data-role="list-divider">Settings<span class="ui-li-count">3</span></li>
              <li><a href="#page5" data-transition="slide">Network Configuration </a></li>
              <!-- <li><a href="#page6" data-transition="slide">Crew Allocation </a></li> -->
-             <li>WiFi Settings</li>
+             <li><a href="#page13" data-transition="slide">WiFi Settings</a></li>
           </ul>
     </div>
     <div data-role="footer">
@@ -639,7 +689,7 @@
                 <p>Total Usage:<strong> 0.0 MB</strong></p>
                 <p>(!) Estimated month-to-month usage updated 2015-06-07. Chart does not reflect Pro-Rated Charges due to mid-period plan changes.</p>
                 <p>Plan's Data Speed <strong><font color="green">1500 MB</font>4 Mbps</strong>  <font color="green">1 Mbps</font></strong></p>
-                <p><a href="#page6" class="ui-btn">Crew Allocation</a></p>
+                <p><a href="#page6" class="ui-btn" data-transition="slide">Crew Allocation</a></p>
                 <p class="ui-li-aside">Upd:<strong>&nbsp;2015-02-25</strong></p>
 
             </li>
@@ -658,7 +708,7 @@
                 <p>2015-05-15	Data plan changed from VSAT F6 512/2048 2009 to OP2K	</p>
                 <p>2015-05-14	Data plan changed from F6 to FX6</p>
                 <p>2015-05-14	Data plan changed from FX6 to F6</p>
-                <p><a href="#page11" class="ui-btn">Manage Alerts</a></p>
+                <p><a href="#page11" class="ui-btn" data-transition="slide">Manage Alerts</a></p>
                 <p><font color="red">No Alerts configured yet</font></p>
                 <p class="ui-li-aside"><strong>2012-12-05</strong></p>
             </li>
@@ -680,7 +730,7 @@
   <div data-role="page" id="page11" data-theme="a" data-content-theme="b">
      <div data-role="header">
        <a href="#page9" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
-         <H1>Who to Notify</H1>
+         <H1>Set Alert Notifications</H1>
            <a href="#popupMenu6" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
        <div data-role="popup" id="popupMenu6" data-theme="a">
          <ul data-role="listview" data-inset="true" style="min-width:100px;">
@@ -692,42 +742,90 @@
        </div>
      </div>
      <div data-role="main" class="ui-content">
-       <p>Add email addresses of recipients who will receive usage alerts via email.</p>
+     <ul data-role="listview" data-inset="true" data-split-icon="delete">
+      <li data-role="list-divider">Usage Alerts<span class="ui-li-count">1</span></li>
+       <li><p>Send alerts when usage reaches the following thresholds of Monthly Allowance:</p>
+         <form>
+            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                <legend>Send alerts when usage reaches the following thresholds of Monthly Allowance:</legend>
+                <input type="checkbox" name="checkbox-h-2a" id="checkbox-h-2a">
+                <label for="checkbox-h-2a">50%</label>
+                <input type="checkbox" name="checkbox-h-2b" id="checkbox-h-2b">
+                <label for="checkbox-h-2b">80%</label>
+                <input type="checkbox" name="checkbox-h-2c" id="checkbox-h-2c">
+                <label for="checkbox-h-2c">100%</label>
+            </fieldset>
+        </form>
 
-     <!-- </ul> -->
-     <a class="ui-btn ui-btn-inline" href="#page7" data-transition="slide">Add New User</a>
-       <!-- <div data-role="tabs" id="tabs"> -->
-           <div id="one" >
-             <ul data-role="listview" data-inset="true" data-split-icon="delete">
-     <li data-role="list-divider">Email Receipients<span class="ui-li-count">2</span></li>
-               <li><a href="#page7" data-transition="slide">
-                 <p><strong>jack.daniels@gmail.com</strong></p></a>
-                 <a href="#deleteProfile" data-rel="popup" data-position-to="window" data-transition="pop">Delete profile</a></li>
-                 <li><a href="#page7" data-transition="slide">
-                   <p><strong>jack.monk@gmail.com</strong></p></a>
-                   <a href="#deleteProfile" data-rel="popup" data-position-to="window" data-transition="pop">Delete profile</a></li>
-                   <li><a href="#page7" data-transition="slide">
-                     <p><strong>jack.stun@gmail.com</strong></p></a>
-                     <a href="#deleteProfile" data-rel="popup" data-position-to="window" data-transition="pop">Delete profile</a></li>
-             </ul>
-           </div>
-           <div id="two">
-             <p>Add phone numbers of recipients who will receive usage alerts via <strong>text/SMS</strong>.</p>
-           <a class="ui-btn ui-btn-inline" href="#page7" data-transition="slide" >Add New Phone</a>
-           <ul data-role="listview" data-inset="true" data-split-icon="delete">
-             <li data-role="list-divider">Phone Numbers<span class="ui-li-count">6</span></li>
-             <li><a href="#page7" data-transition="slide">
-               <p><strong>+48 123 345 65 78</strong></p>
-               <a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
-               <li><a href="#page7" data-transition="slide">
-                 <p><strong>+48 123 345 65 78</strong></p>
-                 <a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
-                 <li><a href="#page7" data-transition="slide">
-                   <p><strong>+48 123 345 65 78</strong></p>
-                   <a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
-         </ul>
 
-         </div>
+       </li>
+       <li data-role="list-divider">Overage Alerts<span class="ui-li-count">1</span></li>
+       <li><form>
+           <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <!-- <legend>Horizontal:</legend> -->
+            <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="on" checked="checked">
+            <label for="radio-choice-h-2a">ON</label>
+            <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="off">
+            <label for="radio-choice-h-2b">OFF</label>
+          </fieldset>
+          <p>Send alerts when usage goes over the Monthly Allowance by the following amount:</p>
+            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                      <!-- <legend>Horizontal:</legend> -->
+                      <input type="radio" name="radio-choice-h-212" id="radio-choice-h-2a2" value="off">
+                      <label for="radio-choice-h-2a2">1</label>
+                      <input type="radio" name="radio-choice-h-212" id="radio-choice-h-2b2" value="off">
+                      <label for="radio-choice-h-2b2">2</label>
+                      <input type="radio" name="radio-choice-h-212" id="radio-choice-h-2c2" value="off">
+                      <label for="radio-choice-h-2c2">5</label>
+                      <input type="radio" name="radio-choice-h-212" id="radio-choice-h-2d2" value="on" checked="checked">
+                      <label for="radio-choice-h-2d2">10</label>
+                      <input type="radio" name="radio-choice-h-212" id="radio-choice-h-2e2" value="off">
+                      <label for="radio-choice-h-2e2">25</label>
+                      <input type="radio" name="radio-choice-h-212" id="radio-choice-h-2f2" value="off">
+                      <label for="radio-choice-h-2f2">50</label>
+             </fieldset>
+              <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">            
+               <input type="radio" name="radio-choice-h-23" id="radio-choice-h-2a13" value="on" checked="checked">
+               <label for="radio-choice-h-2a13">MB</label>
+               <input type="radio" name="radio-choice-h-23" id="radio-choice-h-2b13" value="off">
+               <label for="radio-choice-h-2b13">GB</label>
+             </fieldset>
+           </form>
+       </li>
+       <li data-role="list-divider">BMS Alerts<span class="ui-li-count">1</span></li>
+       <li><p>Send alerts when usage goes over the Monthly Allowance by the following amount:</p></li>
+
+       <li data-role="list-divider">Who to Notify<span class="ui-li-count">1</span></li>
+       <li><p>Add email addresses of recipients who will receive usage alerts via email.</p>
+       <p><a class="ui-btn ui-btn-inline" href="#page7" data-transition="slide" data-mini="true">Add New User</a></p>
+       </li>
+       <li data-role="list-divider" data-theme="b"  data-content-theme="a">Email Receipients<span class="ui-li-count">3</span></li>
+       <li><a href="#page7" data-transition="slide">
+         <p><strong>jack.daniels@gmail.com</strong></p></a>
+         <a href="#deleteProfile" data-rel="popup" data-position-to="window" data-transition="pop">Delete profile</a></li>
+         <li><a href="#page7" data-transition="slide">
+           <p><strong>jack.monk@gmail.com</strong></p></a>
+           <a href="#deleteProfile" data-rel="popup" data-position-to="window" data-transition="pop">Delete profile</a></li>
+           <li><a href="#page7" data-transition="slide">
+             <p><strong>jack.stun@gmail.com</strong></p></a>
+             <a href="#deleteProfile" data-rel="popup" data-position-to="window" data-transition="pop">Delete profile</a></li>
+       <li><p>Add phone numbers of recipients who will receive usage alerts via <strong>text/SMS</strong>.</p>
+       <p><a class="ui-btn ui-btn-inline" href="#page7" data-transition="slide" >Add New Phone</a></p>
+     </li>
+       <li data-role="list-divider" data-theme="b">Phone Numbers<span class="ui-li-count">3</span></li>
+       <li><a href="#page7" data-transition="slide">
+         <p><strong>+48 123 345 65 78</strong></p>
+         <a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+         <li><a href="#page7" data-transition="slide">
+           <p><strong>+48 123 345 65 78</strong></p>
+           <a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+           <li><a href="#page7" data-transition="slide">
+             <p><strong>+48 123 345 65 78</strong></p>
+             <a href="#deleteUser" data-rel="popup" data-position-to="window" data-transition="pop">Delete User</a></li>
+           </li>
+       </li>
+     </ul>
+
        <!-- </div> -->
          <div data-role="popup" id="deleteProfile" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
              <h3>Delete Profile?</h3>
@@ -748,7 +846,112 @@
        </H1>
      </div>
    </div> <!--! end of #container -->
+   <div data-role="page" id="page7"  data-theme="a" data-content-theme="b">
+      <div data-role="header">
+        <a href="#page6" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
+          <H1>Edit/Create new Email/Phone</H1>
+          <a href="#popupMenu7" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
+        <div data-role="popup" id="popupMenu7" data-theme="a">
+          <ul data-role="listview" data-inset="true" style="min-width:100px;">
+            <li data-role="list-divider">Choose an action</li>
+            <li><a href="#page0">Home</a></li>
+            <li><a href="http://staging.mykvh.com">KVH Full</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <div data-role="main" class="ui-content">
+           <form method="post" action="#page6">
+            <label for="fname">Profile name</label>
+            <input type="text" name="fname" id="fname">
+            <label for="alloc">Allocation</label>
+            <input type="text" name="alloc" id="alloc">
+            <label for="lname">Allocation Type</label>
+            <input type="text" name="lname" id="fname">
+            <label for="lname">Allocation Period</label>
+            <input type="text" name="lname" id="fname">
+            <input type="submit" value="Submit">
+            <a href="#page6" class="ui-btn">Cancel</a>
+          </form>
+      </div>
+      <div data-role="footer">
+        <H1>
+          ©KVH
+        </H1>
+      </div>
+    </div> <!--! end of #container -->
 
+    <div data-role="page" id="page13"  data-theme="a" data-content-theme="b">
+       <div data-role="header">
+         <a href="#page6" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
+           <H1>Change WiFi Settings</H1>
+           <a href="#popupMenu7" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a ui-btn-icon-notext"></a>
+         <div data-role="popup" id="popupMenu7" data-theme="a">
+           <ul data-role="listview" data-inset="true" style="min-width:100px;">
+             <li data-role="list-divider">Choose an action</li>
+             <li><a href="#page0">Home</a></li>
+             <li><a href="http://staging.mykvh.com">KVH Full</a></li>
+             <li><a href="#">Logout</a></li>
+           </ul>
+         </div>
+       </div>
+       <div data-role="main" class="ui-content">
+            <form method="post" action="#page6">
+             <fieldset data-role="controlgroup" data-type="horizontal"  data-mini="true">
+                 <legend>Mode</legend>
+                 <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="on" checked="checked">
+                 <label for="radio-choice-h-2a">OFF</label>
+                 <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="off">
+                 <label for="radio-choice-h-2b">AP</label>
+             </fieldset>
+          </br>
+             <label for="alloc">SSID</label>
+             <input type="text" name="alloc" id="alloc">
+             <fieldset data-role="controlgroup" data-type="horizontal"  data-mini="true">
+                 <legend>Security Mode</legend>
+                 <input type="radio" name="radio-choice-h-21" id="radio-choice-h-2a1" value="on" checked="checked">
+                 <label for="radio-choice-h-2a1">OFF</label>
+                 <input type="radio" name="radio-choice-h-21" id="radio-choice-h-2b1" value="off">
+                 <label for="radio-choice-h-2b1">WPA2_PSK</label>
+                 <input type="radio" name="radio-choice-h-21" id="radio-choice-h-2c1" value="off">
+                 <label for="radio-choice-h-2c1">WEB128</label>
+              </fieldset>
+            </br>
+             <label for="lname">Password</label>
+             <input type="text" name="lname" id="fname">
+             <fieldset data-role="controlgroup" data-type="horizontal"  data-mini="true">
+                 <legend>Band</legend>
+                 <input type="radio" name="radio-choice-h-22" id="radio-choice-h-2a2" value="off">
+                 <label for="radio-choice-h-2a2">802.11b</label>
+                 <input type="radio" name="radio-choice-h-22" id="radio-choice-h-2b2" value="on" checked="checked">
+                 <label for="radio-choice-h-2b2">802.11g</label>                 
+              </fieldset>
+             <fieldset data-role="controlgroup" data-mini="true">
+                <legend>Channel</legend>
+                <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6a" value="on" checked="checked">
+                <label for="radio-choice-v-6a">1</label>
+                <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6b" value="off">
+                <label for="radio-choice-v-6b">2</label>
+                <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6c" value="other">
+                <label for="radio-choice-v-6c">3</label>
+                <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6d" value="on">
+                <label for="radio-choice-v-6d">4</label>
+                <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6e" value="off">
+                <label for="radio-choice-v-6e">5</label>
+                <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6f" value="other">
+                <label for="radio-choice-v-6f">6</label>
+            </fieldset>
+
+             <input type="submit" value="Submit">
+             <a href="#page6" class="ui-btn">Cancel</a>
+           </form>
+       </div>
+       <div data-role="footer">
+         <H1>
+           ©KVH
+         </H1>
+       </div>
+     </div> <!--! end of #container -->
 
 <!--</div>-->
 </body>
